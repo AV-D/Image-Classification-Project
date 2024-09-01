@@ -8,11 +8,22 @@ This project focuses on image classification using Convolutional Neural Networks
 
 The project involves the following key steps:
 
-1. **Data Acquisition**: Fetching the dataset from Kaggle using the Kaggle API.
-2. **Data Exploration**: Analyzing the dataset to understand its structure and characteristics.
-3. **Model Development**: Creating and experimenting with multiple CNN architectures.
-4. **Training**: Training the models on the training dataset while monitoring performance.
-5. **Evaluation**: Evaluating model performance using validation and test datasets.
+1. **Data Acquisition**: The dataset is fetched from Kaggle using the Kaggle API. The process is streamlined to load the data into Google Colab's temporary storage without saving it permanently, as the data is only needed for the duration of the project.
+2. **Data Exploration**:
+   - Dataset Overview: The notebook explores the dataset to understand its structure, confirming that it contains images with three color channels and eight distinct classes.
+   - Image Size Analysis: The images are analyzed for size uniformity, noting that they vary in dimensions. This step is crucial for preprocessing before feeding them into the CNN.
+3. **Data Preprocessing**
+- Resizing Images: All images are resized to a standard dimension to ensure consistency across the dataset.
+- Splitting the Dataset: The dataset is programmatically divided into training, validation, and test sets. This split is essential for evaluating model performance objectively.
+- Data Augmentation: Techniques may be applied to augment the dataset, enhancing the model's ability to generalize by artificially increasing the diversity of the training set.
+4. **Model Development**:
+  - Number of Layers: Experimenting with different depths to assess the impact on performance.
+  - Activation Functions: Testing various activation functions, including ReLU, Sigmoid, and Tanh, to determine which yields the best results.
+  - Dropout Layers: Implementing dropout to prevent overfitting, with experiments conducted using 25% and 50% dropout rates.
+  - Regularization Techniques: Applying regularization methods to penalize complex models and improve generalization.
+  - Optimizers: Comparing different optimizers, such as Adam and SGD, to evaluate their effects on training dynamics and convergence.
+5. **Training**: Training the models on the training dataset while monitoring performance.
+6. **Evaluation**: Evaluating model performance using validation and test datasets.
 
 ## Theoretical Background
 
